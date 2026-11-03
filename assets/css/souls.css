@@ -1,0 +1,1715 @@
+/* ==========================================================================
+   Souls for Christ Ministries Zambia
+   A warm navy-and-gold presentation built on the shared church theme.
+   ========================================================================== */
+
+:root {
+  --souls-navy: #0b2240;
+  --souls-navy-deep: #061529;
+  --souls-navy-soft: #13304f;
+  --souls-gold: #d4af37;
+  --souls-gold-bright: #e6c862;
+  --souls-gold-pale: #f8e9a2;
+  --souls-gold-deep: #806100;
+  --souls-cream: #fbf8f2;
+  --souls-paper: #fffdf8;
+  --souls-ink: #0b2240;
+  --souls-muted: #526070;
+  --souls-line: rgba(11, 34, 64, 0.14);
+  --rpai-ink: var(--souls-navy);
+  --rpai-gold: var(--souls-gold);
+  --rpai-gold-bright: var(--souls-gold-bright);
+  --rpai-gold-edge: #b28d22;
+  --rpai-gold-label: var(--souls-gold-deep);
+  --rpai-paper: var(--souls-paper);
+  --rpai-line: var(--souls-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--souls-cream);
+  color: #3d4753;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', Georgia, serif;
+  color: var(--souls-navy);
+}
+
+p {
+  color: #465362;
+}
+
+a {
+  color: #1b4d7a;
+}
+
+::selection {
+  color: var(--souls-navy);
+  background: var(--souls-gold-pale);
+}
+
+/* --------------------------------------------------------------------------
+   Header and navigation
+   -------------------------------------------------------------------------- */
+
+.site-nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-nav .site-navigation {
+  position: relative;
+  display: flex;
+  min-height: 392px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 316px;
+}
+
+.site-navigation .logo {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  max-width: min(76vw, 34rem);
+  transform: translateX(-50%);
+}
+
+.site-navigation .logo .site-logo {
+  display: block;
+  width: auto;
+  height: 300px;
+  min-height: 0;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.site-navigation .rpai-logo-tagline {
+  display: block !important;
+  width: 100%;
+  margin-top: 0.35rem;
+  color: var(--souls-gold);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.site-nav .site-navigation .site-menu {
+  display: flex !important;
+  float: none !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.site-nav .site-navigation .site-menu > li {
+  display: block;
+}
+
+.site-nav .site-navigation .site-menu > li > a {
+  padding: 0.6rem 0.58rem;
+  color: rgba(255, 255, 255, 0.86);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+html[lang="bem"] .site-nav .site-navigation .site-menu > li > a,
+html[lang="ny"] .site-nav .site-navigation .site-menu > li > a,
+html[lang="tum"] .site-nav .site-navigation .site-menu > li > a {
+  padding-right: 0.42rem;
+  padding-left: 0.42rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+}
+
+.site-nav .site-navigation .site-menu > li > a:hover,
+.site-nav .site-navigation .site-menu > li.active > a {
+  color: var(--souls-gold);
+}
+
+.site-nav .site-navigation .site-menu > li.active > a {
+  position: relative;
+}
+
+.site-nav .site-navigation .site-menu > li.active > a::after {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.15rem;
+  left: 0.8rem;
+  height: 1px;
+  background: var(--souls-gold);
+  content: '';
+}
+
+.site-nav .site-navigation .site-menu > li.rpai-nav-whatsapp > a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem !important;
+}
+
+.rpai-nav-whatsapp img {
+  width: 19px;
+  height: 19px;
+}
+
+.burger.light:before,
+.burger.light span,
+.burger.light:after {
+  background: var(--souls-gold);
+}
+
+@media (max-width: 991.98px) {
+  .site-nav .site-navigation {
+    min-height: 308px;
+    padding-top: 236px;
+  }
+
+  .site-navigation .logo .site-logo {
+    height: 222px;
+  }
+
+  .site-navigation .rpai-logo-tagline {
+    max-width: 20rem;
+    font-size: 0.72rem;
+  }
+
+  .site-nav .site-navigation .site-menu {
+    display: none !important;
+  }
+
+  .site-navigation .burger {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    float: none !important;
+    margin: 0 !important;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .site-nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .site-nav .site-navigation {
+    min-height: 262px;
+    padding-top: 198px;
+  }
+
+  .site-navigation .logo .site-logo {
+    height: 184px;
+  }
+
+  .site-navigation .rpai-logo-tagline {
+    max-width: 16rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero band
+   -------------------------------------------------------------------------- */
+
+:root {
+  --rpai-band-h: 25rem;
+}
+
+.rpai-home-hero {
+  min-height: calc(var(--rpai-band-h) + 18rem);
+  padding: 26.5rem 0 4.5rem;
+  background-color: var(--souls-navy);
+}
+
+.hero.overlay.rpai-home-hero::before {
+  background-image: url('../images/hero-congregation.jpg');
+  background-position: center 42%;
+}
+
+.rpai-home-hero::after {
+  background:
+    radial-gradient(120% 62% at 50% 102%, rgba(212, 175, 55, 0.21) 0%, rgba(212, 175, 55, 0.05) 48%, rgba(212, 175, 55, 0) 72%),
+    linear-gradient(
+      180deg,
+      rgba(6, 21, 41, 0.52) 0%,
+      rgba(6, 21, 41, 0.62) 46%,
+      rgba(6, 21, 41, 0.86) 86%,
+      rgba(6, 21, 41, 1) var(--rpai-band-h),
+      rgba(6, 21, 41, 1) 100%
+    );
+}
+
+.rpai-home-hero .hero-heading {
+  max-width: 18ch;
+  color: #fff;
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 5rem !important;
+  font-weight: 400;
+  line-height: 0.98;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.4);
+}
+
+.souls-hero-kicker {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.42rem 0.8rem;
+  color: var(--souls-gold-pale);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.souls-hero-sub {
+  max-width: 36rem;
+  margin-bottom: 0.55rem;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.souls-hero-sub strong {
+  color: var(--souls-gold-pale);
+}
+
+.souls-hero-note {
+  max-width: 34rem;
+  margin-bottom: 1.7rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.souls-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.souls-hero-actions .btn {
+  padding: 0.85rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  letter-spacing: 0.13em;
+}
+
+.btn.btn-outline-light {
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn.btn-outline-light:hover,
+.btn.btn-outline-light:focus-visible {
+  color: var(--souls-navy);
+  background: #fff;
+  border-color: #fff;
+}
+
+.rpai-service-schedule {
+  padding: 1.7rem;
+  background: rgba(4, 16, 31, 0.82);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-top: 3px solid var(--souls-gold);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.rpai-service-schedule .subheading {
+  margin-bottom: 1rem;
+  color: var(--souls-gold);
+  font-size: 0.68rem;
+  letter-spacing: 0.17em;
+}
+
+.rpai-service-item h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.rpai-service-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.88rem;
+}
+
+.rpai-service-item strong {
+  color: var(--souls-gold-pale);
+}
+
+.souls-service-cta {
+  margin-top: 1.15rem;
+}
+
+.souls-service-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.55rem 0.9rem;
+  color: var(--souls-navy);
+  background: var(--souls-gold);
+  border: 1px solid var(--souls-gold);
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.souls-service-cta a:hover {
+  background: var(--souls-gold-bright);
+}
+
+/* Inner page heroes */
+.souls-page-hero {
+  min-height: calc(var(--rpai-band-h) + 9rem);
+  padding-top: calc(var(--rpai-band-h) + 1.5rem);
+  padding-bottom: 3.5rem;
+}
+
+.souls-page-hero .hero-heading {
+  max-width: 22ch;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 4rem !important;
+  text-align: center;
+}
+
+.souls-page-hero .souls-hero-sub {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --rpai-band-h: 19rem;
+  }
+
+  .rpai-home-hero {
+    min-height: calc(var(--rpai-band-h) + 18rem);
+    padding-top: 20rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .rpai-home-hero .hero-heading {
+    font-size: 3.7rem !important;
+  }
+
+  .souls-page-hero {
+    min-height: calc(var(--rpai-band-h) + 9rem);
+    padding-top: calc(var(--rpai-band-h) + 1.5rem);
+  }
+
+  .souls-page-hero .hero-heading {
+    font-size: 3.2rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --rpai-band-h: 18rem;
+  }
+
+  .rpai-home-hero {
+    min-height: calc(var(--rpai-band-h) + 20rem);
+    padding-top: 19rem;
+    padding-bottom: 3rem;
+  }
+
+  .rpai-home-hero .hero-heading {
+    font-size: 3rem !important;
+  }
+
+  .souls-hero-sub {
+    font-size: 1rem;
+  }
+
+  .rpai-service-schedule {
+    padding: 1.25rem;
+  }
+
+  .souls-page-hero {
+    min-height: calc(var(--rpai-band-h) + 10rem);
+    padding-top: calc(var(--rpai-band-h) + 1rem);
+  }
+
+  .souls-page-hero .hero-heading {
+    font-size: 2.65rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sections, headings and buttons
+   -------------------------------------------------------------------------- */
+
+.section {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.32);
+}
+
+.section .heading {
+  color: var(--souls-navy);
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.section .subheading,
+.rpai-section-intro .subheading {
+  color: var(--souls-gold-deep);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+}
+
+.bg-secondary .heading,
+.bg-secondary .subheading,
+.sec-cta .heading {
+  color: #fff;
+}
+
+.bg-secondary .subheading {
+  color: var(--souls-gold);
+}
+
+.section.bg-secondary,
+.sec-cta.bg-secondary {
+  background-color: var(--souls-navy) !important;
+}
+
+.bg-secondary p,
+.sec-cta p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.btn.btn-primary {
+  color: var(--souls-navy) !important;
+  background-color: var(--souls-gold) !important;
+  border-color: var(--souls-gold) !important;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(11, 34, 64, 0.13);
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus-visible {
+  color: var(--souls-navy) !important;
+  background-color: var(--souls-gold-bright) !important;
+  border-color: var(--souls-gold-bright) !important;
+  transform: translateY(-1px);
+}
+
+.btn.btn-secondary {
+  color: var(--souls-navy) !important;
+  background-color: var(--souls-gold) !important;
+  border-color: var(--souls-gold) !important;
+  border-radius: 4px;
+}
+
+.souls-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--souls-navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.souls-link-arrow::after {
+  content: '→';
+  font-size: 1rem;
+}
+
+.souls-link-arrow:hover {
+  color: var(--souls-gold-deep);
+}
+
+/* Section intro */
+.rpai-section-intro {
+  max-width: 50rem;
+}
+
+.rpai-section-intro p {
+  color: var(--souls-muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Home sections
+   -------------------------------------------------------------------------- */
+
+.souls-live-section {
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-live-section .heading {
+  color: #fff;
+  text-align: left;
+}
+
+.souls-live-section p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.souls-live-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 3px;
+  aspect-ratio: 16 / 9;
+}
+
+.souls-live-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.souls-live-image:hover img {
+  transform: scale(1.025);
+}
+
+.souls-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(6, 21, 41, 0.12), rgba(6, 21, 41, 0.55));
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.souls-play span:first-child {
+  display: grid;
+  width: 4.4rem;
+  height: 4.4rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  background: rgba(212, 175, 55, 0.9);
+  color: var(--souls-navy);
+}
+
+.souls-announcement {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.5rem;
+  width: min(100%, 52rem);
+  margin: 0 auto;
+  padding: 1.8rem 2rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 4px solid var(--souls-gold);
+  box-shadow: 0 24px 50px -34px rgba(11, 34, 64, 0.5);
+}
+
+.souls-announcement-mark {
+  display: grid;
+  width: 3.2rem;
+  height: 3.2rem;
+  place-items: center;
+  color: var(--souls-gold-deep);
+  background: #f7f1e3;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+.souls-announcement h3 {
+  margin: 0 0 0.55rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.souls-announcement p {
+  margin: 0;
+  color: var(--souls-ink);
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.souls-announcement .souls-announcement-meta {
+  margin-top: 0.85rem;
+  color: var(--souls-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.souls-about-photo {
+  position: relative;
+  width: min(100%, 34rem);
+  margin-left: auto;
+}
+
+.souls-about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 20px 45px -28px rgba(11, 34, 64, 0.6);
+}
+
+.souls-strip-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+}
+
+.souls-about-photo::after {
+  position: absolute;
+  right: -0.7rem;
+  bottom: -0.7rem;
+  width: 45%;
+  height: 45%;
+  border-right: 3px solid var(--souls-gold);
+  border-bottom: 3px solid var(--souls-gold);
+  content: '';
+  pointer-events: none;
+}
+
+.rpai-home-message {
+  border-left: 3px solid var(--souls-gold);
+}
+
+.rpai-home-message h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.rpai-home-message p {
+  color: #465362;
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+.souls-faith-photo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4 / 5;
+}
+
+.souls-faith-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.souls-faith-photo::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  content: '';
+  pointer-events: none;
+}
+
+.rpai-faith-scripture {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--souls-gold);
+}
+
+.rpai-faith-item h3 {
+  color: var(--souls-gold);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Ministry cards */
+.souls-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.souls-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 1.6rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.souls-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px -26px rgba(11, 34, 64, 0.35);
+}
+
+.souls-card-icon {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  color: var(--souls-gold-deep);
+  background: #f7f1e3;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.souls-card h3 {
+  margin-bottom: 0.55rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.souls-card p {
+  margin-bottom: 0;
+  color: #526070;
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 991.98px) {
+  .souls-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Service cards */
+.souls-service-card {
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-service-card .souls-card-icon {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.souls-service-card h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.02rem;
+  text-align: center;
+}
+
+.souls-service-card p {
+  margin-bottom: 0.35rem;
+  color: #526070;
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.souls-service-card .souls-time {
+  color: var(--souls-gold-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   About / founder
+   -------------------------------------------------------------------------- */
+
+.rpai-pastor-portrait img {
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 20px 46px -28px rgba(11, 34, 64, 0.55);
+}
+
+.rpai-pastor-name {
+  color: var(--souls-gold-deep);
+}
+
+.rpai-founder-profile {
+  border-top: 2px solid var(--souls-gold);
+}
+
+.rpai-founder-bio {
+  color: #465362;
+}
+
+.rpai-purpose-grid {
+  border-top: 2px solid var(--souls-gold);
+}
+
+.rpai-purpose-item .heading {
+  font-size: 2.4rem;
+}
+
+.rpai-purpose-item p {
+  color: #465362;
+}
+
+/* --------------------------------------------------------------------------
+   Gallery
+   -------------------------------------------------------------------------- */
+
+.souls-gallery-hero .hero-heading {
+  text-align: center;
+}
+
+.souls-gallery-intro {
+  max-width: 44rem;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 2rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.rpai-media-card {
+  border: 1px solid var(--souls-line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rpai-media-card figcaption {
+  color: var(--souls-ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.rpai-gallery-controls button,
+.rpai-gallery-optout button {
+  color: var(--souls-navy);
+  background: var(--souls-gold);
+  border: 1px solid var(--souls-gold-deep);
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.rpai-gallery-controls button:hover,
+.rpai-gallery-optout button:hover {
+  background: var(--souls-gold-bright);
+}
+
+.rpai-gallery-carousel .tns-controls button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Devotional / announcements
+   -------------------------------------------------------------------------- */
+
+.souls-word-card {
+  width: min(100%, 48rem);
+  margin: 0 auto;
+  padding: 2rem 2.2rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 4px solid var(--souls-gold);
+  box-shadow: 0 26px 55px -34px rgba(11, 34, 64, 0.45);
+}
+
+.souls-word-date {
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--souls-gold-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.souls-word-card h2 {
+  margin-bottom: 0.8rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.5rem;
+}
+
+.souls-word-verse {
+  margin: 0 0 1.35rem;
+  padding: 1rem 1.2rem;
+  color: var(--souls-navy);
+  background: #f8f2e5;
+  border-left: 3px solid var(--souls-gold);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.souls-word-verse cite {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--souls-gold-deep);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.souls-word-card p {
+  color: #465362;
+  font-size: 1.01rem;
+  line-height: 1.85;
+}
+
+.souls-word-signature {
+  margin: 1.4rem 0 0;
+  color: var(--souls-gold-deep);
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  text-align: right;
+}
+
+.souls-announcement-card {
+  display: block;
+  height: 100%;
+  padding: 1.6rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-announcement-card h2,
+.souls-announcement-card h3 {
+  margin-bottom: 0.6rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.souls-announcement-card p {
+  margin-bottom: 0.8rem;
+  color: #526070;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.souls-announcement-card .souls-date {
+  display: inline-block;
+  color: var(--souls-gold-deep);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Give and contact
+   -------------------------------------------------------------------------- */
+
+.souls-give-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 1.7rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-give-card h2,
+.souls-give-card h3 {
+  margin-bottom: 0.6rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.souls-give-card p {
+  color: #526070;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.souls-give-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.souls-detail-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.souls-detail-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.6rem 0;
+  color: var(--souls-ink);
+  border-top: 1px solid var(--souls-line);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.souls-detail-list li:first-child {
+  border-top: 0;
+}
+
+.souls-detail-list i {
+  margin-top: 0.15rem;
+  color: var(--souls-gold-deep);
+}
+
+.souls-contact-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-contact-card .souls-card-icon {
+  margin-bottom: 0.9rem;
+}
+
+.souls-contact-card h2,
+.souls-contact-card h3 {
+  margin-bottom: 0.45rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.98rem;
+  text-align: left;
+}
+
+.souls-contact-card p,
+.souls-contact-card a {
+  margin-bottom: 0;
+  color: #526070;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.souls-contact-card a:hover {
+  color: var(--souls-gold-deep);
+}
+
+.souls-form-panel {
+  padding: 1.7rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-form-panel h2 {
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.35rem;
+  text-align: left;
+}
+
+.souls-form-panel .souls-form-help {
+  margin-bottom: 1.2rem;
+  color: var(--souls-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.souls-form-panel label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--souls-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.souls-form-panel .form-control,
+.souls-form-panel select,
+.souls-form-panel textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.8rem;
+  color: var(--souls-ink);
+  background: #fff;
+  border: 1px solid #cfd7df;
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+.souls-form-panel textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.souls-form-panel .form-control:focus,
+.souls-form-panel select:focus,
+.souls-form-panel textarea:focus {
+  outline: 2px solid var(--souls-gold);
+  outline-offset: 1px;
+  border-color: var(--souls-gold);
+}
+
+.souls-form-status {
+  min-height: 1.4rem;
+  margin: 0.9rem 0 0;
+  color: var(--souls-gold-deep);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.souls-map {
+  overflow: hidden;
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 42vw, 430px);
+  border: 0;
+}
+
+.souls-map-note {
+  margin: 0;
+  padding: 0.65rem 1rem 0.8rem;
+  color: var(--souls-muted);
+  background: var(--souls-paper);
+  font-size: 0.82rem;
+}
+
+.souls-map-note a {
+  color: var(--souls-gold-deep);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.souls-prayer-band {
+  background: linear-gradient(135deg, #0b2240 0%, #13304f 55%, #07182d 100%);
+  border-top: 3px solid var(--souls-gold);
+  border-bottom: 3px solid var(--souls-gold);
+}
+
+.souls-prayer-band .heading {
+  color: #fff;
+}
+
+.souls-prayer-band p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  padding: 4.5rem 0 2.2rem;
+  background: linear-gradient(180deg, #13304f 0%, var(--souls-navy) 58%, #061529 100%);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.site-footer .widget h3 {
+  color: var(--souls-gold);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.13em;
+}
+
+.site-footer p,
+.site-footer address,
+.site-footer li,
+.site-footer a {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.site-footer a:hover {
+  color: var(--souls-gold-pale);
+}
+
+.site-footer .footer-brand {
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+}
+
+.site-footer .footer-tagline {
+  color: var(--souls-gold);
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 1.85rem;
+  line-height: 1.2;
+}
+
+.site-footer .footer-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .footer-links a {
+  font-size: 0.86rem;
+}
+
+.site-footer .rpai-social-links img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.site-footer .rpai-social-links a:hover img {
+  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(3deg);
+  opacity: 1;
+}
+
+.site-footer .footer-bottom {
+  margin-top: 2.8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.site-footer .footer-bottom a {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+}
+
+.site-footer .footer-bottom a:hover {
+  color: var(--souls-gold);
+}
+
+/* --------------------------------------------------------------------------
+   Small utilities
+   -------------------------------------------------------------------------- */
+
+.souls-eyebrow {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--souls-gold-deep);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.souls-divider {
+  width: 4rem;
+  height: 2px;
+  margin: 1.1rem auto;
+  background: var(--souls-gold);
+}
+
+.souls-quote {
+  margin: 0;
+  padding: 1.4rem 1.6rem;
+  color: var(--souls-navy);
+  background: #f8f2e5;
+  border-left: 3px solid var(--souls-gold);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.souls-quote cite {
+  display: block;
+  margin-top: 0.65rem;
+  color: var(--souls-gold-deep);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.souls-small-note {
+  color: var(--souls-muted);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+.souls-mt-0 {
+  margin-top: 0 !important;
+}
+
+/* Add a gentle fade to images when they load; the animation is disabled for
+   people who ask their device to reduce motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .souls-fade {
+    animation: soulsFade 0.6s ease both;
+  }
+}
+
+@keyframes soulsFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Language switcher
+   -------------------------------------------------------------------------- */
+
+.souls-lang-switcher {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--souls-navy);
+}
+
+.souls-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.62rem 0.95rem;
+  color: var(--souls-navy);
+  background: var(--souls-paper);
+  border: 1px solid rgba(11, 34, 64, 0.18);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(6, 21, 41, 0.22);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.souls-lang-toggle:hover,
+.souls-lang-toggle:focus-visible {
+  border-color: var(--souls-gold);
+  outline: 2px solid transparent;
+}
+
+.souls-lang-toggle:focus-visible {
+  outline-color: var(--souls-gold);
+  outline-offset: 2px;
+}
+
+.souls-lang-globe {
+  display: inline-flex;
+}
+
+.souls-lang-globe svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.souls-lang-current {
+  max-width: 7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.souls-lang-chevron {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: -0.2rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.souls-lang-switcher.is-open .souls-lang-chevron {
+  margin-top: 0.15rem;
+  transform: rotate(-135deg);
+}
+
+.souls-lang-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.5rem);
+  width: 15.5rem;
+  max-height: min(70vh, 26rem);
+  padding: 0.45rem;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid rgba(11, 34, 64, 0.14);
+  border-top: 3px solid var(--souls-gold);
+  box-shadow: 0 18px 38px rgba(6, 21, 41, 0.22);
+}
+
+.souls-lang-menu[hidden] {
+  display: none;
+}
+
+.souls-lang-group {
+  margin: 0.55rem 0.6rem 0.25rem;
+  color: var(--souls-gold-deep);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.souls-lang-menu button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.48rem 0.6rem;
+  color: var(--souls-navy);
+  background: none;
+  border: 0;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.souls-lang-menu button:hover,
+.souls-lang-menu button:focus-visible {
+  background: #f7f1e3;
+  outline: none;
+}
+
+.souls-lang-menu button[aria-selected="true"] {
+  color: var(--souls-gold-deep);
+  background: rgba(212, 175, 55, 0.14);
+  font-weight: 800;
+}
+
+.souls-lang-menu button[aria-selected="true"]::after {
+  content: '✓';
+  font-size: 0.8rem;
+}
+
+.souls-lang-note {
+  margin: 0.5rem 0.6rem 0.25rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(11, 34, 64, 0.1);
+  color: #67717d;
+  font-size: 0.66rem;
+  line-height: 1.45;
+}
+
+/* Hide Google's own banner and gadget; the custom menu drives translation. */
+.goog-te-banner-frame.skiptranslate,
+iframe.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+#google_translate_element {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sermon notes and spiritual heritage
+   -------------------------------------------------------------------------- */
+
+.souls-sermon-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 1.55rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-sermon-card h3 {
+  margin-bottom: 0.45rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.souls-sermon-card .souls-sermon-text {
+  color: var(--souls-gold-deep);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.souls-sermon-card p {
+  color: #526070;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.souls-sermon-card .souls-sermon-points {
+  margin: 0.4rem 0 0;
+  padding-left: 1.05rem;
+  color: #465362;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.souls-sermon-card .souls-sermon-points li {
+  margin-bottom: 0.3rem;
+}
+
+.souls-sermon-outline {
+  width: min(100%, 52rem);
+  margin: 0 auto;
+  padding: 2rem 2.2rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 4px solid var(--souls-gold);
+  box-shadow: 0 24px 50px -34px rgba(11, 34, 64, 0.42);
+}
+
+.souls-sermon-outline h2 {
+  margin-bottom: 0.55rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.souls-sermon-outline .souls-sermon-text {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--souls-gold-deep);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.souls-sermon-outline p,
+.souls-sermon-outline li {
+  color: #465362;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.souls-sermon-outline ol {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.souls-sermon-outline li {
+  margin-bottom: 0.6rem;
+}
+
+.souls-heritage {
+  height: 100%;
+  padding: 1.8rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-left: 4px solid var(--souls-gold);
+}
+
+.souls-heritage h3 {
+  margin-bottom: 0.55rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.souls-heritage p {
+  color: #465362;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.souls-heritage p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  .souls-lang-switcher {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .souls-lang-toggle {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .souls-lang-menu {
+    width: min(17rem, calc(100vw - 1.5rem));
+  }
+
+  .souls-sermon-outline {
+    padding: 1.35rem 1.2rem;
+  }
+}

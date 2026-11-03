@@ -1,0 +1,1647 @@
+/* ==========================================================================
+   Souls for Christ Ministries Zambia — rebuilt 2026
+   A cleaner, editorial church presentation inspired by AGCOM and SCOAN:
+   strong header, full-bleed hero, clear story, spiritual heritage and media.
+   ========================================================================== */
+
+:root {
+  --rebuild-max: 1180px;
+  --rebuild-radius: 4px;
+}
+
+body {
+  background: var(--souls-cream);
+}
+
+/* --------------------------------------------------------------------------
+   Top utility bar
+   -------------------------------------------------------------------------- */
+
+.souls-topbar {
+  position: relative;
+  z-index: 1002;
+  background: var(--souls-navy-deep);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.souls-topbar .container {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.souls-topbar a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+
+.souls-topbar a:hover {
+  color: var(--souls-gold);
+}
+
+.souls-topbar-left,
+.souls-topbar-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+}
+
+.souls-topbar .souls-topbar-heritage {
+  color: var(--souls-gold);
+  font-weight: 700;
+}
+
+.souls-topbar .souls-topbar-heritage a {
+  color: var(--souls-gold);
+}
+
+@media (max-width: 767.98px) {
+  .souls-topbar-left span:nth-child(2),
+  .souls-topbar-right .souls-topbar-heritage {
+    display: none;
+  }
+
+  .souls-topbar .container {
+    min-height: 32px;
+    font-size: 0.64rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Main header
+   -------------------------------------------------------------------------- */
+
+.souls-header {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background: rgba(6, 21, 41, 0.96);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.souls-header.is-scrolled {
+  background: rgba(6, 21, 41, 0.99);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.souls-header .container {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.souls-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.7rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.souls-brand:hover {
+  color: #fff;
+}
+
+.souls-brand-mark {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4));
+}
+
+.souls-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.souls-brand-text strong {
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.souls-brand-text small {
+  margin-top: 0.3rem;
+  color: var(--souls-gold);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.souls-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.05rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.souls-nav > li {
+  display: block;
+}
+
+.souls-nav > li > a {
+  display: block;
+  padding: 0.55rem 0.52rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.souls-nav > li > a:hover,
+.souls-nav > li.active > a {
+  color: var(--souls-gold);
+}
+
+.souls-nav > li.active > a {
+  position: relative;
+}
+
+.souls-nav > li.active > a::after {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.12rem;
+  left: 0.5rem;
+  height: 1px;
+  background: var(--souls-gold);
+  content: '';
+}
+
+.souls-live-btn {
+  display: inline-flex;
+  flex: 0 0 auto;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  color: var(--souls-navy) !important;
+  background: var(--souls-gold);
+  border: 1px solid var(--souls-gold);
+  border-radius: 3px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+.souls-live-btn:hover {
+  background: var(--souls-gold-bright);
+}
+
+.souls-burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0.55rem;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.souls-burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 4px 0;
+  background: var(--souls-gold);
+}
+
+@media (max-width: 1199.98px) {
+  .souls-nav {
+    display: none !important;
+  }
+
+  .souls-live-btn {
+    margin-left: auto;
+  }
+
+  .souls-burger {
+    display: block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-header .container {
+    min-height: 64px;
+    gap: 0.7rem;
+  }
+
+  .souls-brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .souls-brand-text strong {
+    font-size: 0.78rem;
+  }
+
+  .souls-brand-text small {
+    font-size: 0.48rem;
+    letter-spacing: 0.16em;
+  }
+
+  .souls-live-btn {
+    display: none;
+  }
+
+  .souls-burger {
+    margin-left: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.souls-hero,
+.souls-page-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: var(--souls-navy-deep);
+}
+
+.souls-hero {
+  display: flex;
+  min-height: min(760px, calc(100svh - 112px));
+  align-items: center;
+}
+
+.souls-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-position: center 38%;
+  background-size: cover;
+  transform: scale(1.01);
+}
+
+.souls-hero::after,
+.souls-page-hero::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 21, 41, 0.95) 0%, rgba(6, 21, 41, 0.82) 45%, rgba(6, 21, 41, 0.28) 100%),
+    linear-gradient(180deg, rgba(6, 21, 41, 0.15) 0%, rgba(6, 21, 41, 0.86) 100%);
+  content: '';
+}
+
+.souls-hero .container,
+.souls-page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.souls-hero .container {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.souls-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.62fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: end;
+}
+
+.souls-hero-copy {
+  max-width: 42rem;
+}
+
+.souls-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  color: var(--souls-gold-pale);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.souls-kicker::before {
+  width: 1.8rem;
+  height: 1px;
+  background: var(--souls-gold);
+  content: '';
+}
+
+.souls-hero h1,
+.souls-page-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.souls-hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3.5rem, 6.6vw, 6rem);
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.28);
+}
+
+.souls-hero-lead {
+  max-width: 35rem;
+  margin: 1.4rem 0 0.75rem;
+  color: #fff;
+  font-size: clamp(1rem, 1.1vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.souls-hero-lead strong {
+  color: var(--souls-gold-pale);
+}
+
+.souls-hero-note {
+  max-width: 33rem;
+  margin: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.souls-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.souls-btn,
+.souls-btn-outline {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.15rem;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.souls-btn {
+  color: var(--souls-navy) !important;
+  background: var(--souls-gold);
+  border: 1px solid var(--souls-gold);
+}
+
+.souls-btn:hover {
+  color: var(--souls-navy) !important;
+  background: var(--souls-gold-bright);
+  border-color: var(--souls-gold-bright);
+  transform: translateY(-1px);
+}
+
+.souls-btn-outline {
+  color: #fff !important;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.souls-btn-outline:hover {
+  color: var(--souls-navy) !important;
+  background: #fff;
+  border-color: #fff;
+}
+
+.souls-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.souls-hero-meta strong {
+  color: var(--souls-gold-pale);
+  font-weight: 800;
+}
+
+.souls-hero-portrait {
+  position: relative;
+  margin: 0;
+  padding: 0.5rem;
+  background: rgba(6, 21, 41, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.38);
+}
+
+.souls-hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.souls-hero-portrait figcaption {
+  padding: 0.9rem 0.5rem 0.55rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.souls-hero-portrait .souls-portrait-name {
+  display: block;
+  color: var(--souls-gold-pale);
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.souls-hero-portrait .souls-portrait-role {
+  display: block;
+  margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.souls-service-card {
+  position: relative;
+  padding: 1.55rem;
+  background: rgba(4, 16, 31, 0.84);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-top: 3px solid var(--souls-gold);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.souls-service-card .souls-kicker {
+  margin-bottom: 0.8rem;
+  font-size: 0.6rem;
+}
+
+.souls-service-item + .souls-service-item {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.souls-service-item h2 {
+  margin: 0 0 0.3rem;
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.souls-service-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.souls-service-item strong {
+  color: var(--souls-gold-pale);
+}
+
+.souls-service-card .souls-btn {
+  width: 100%;
+  margin-top: 1.15rem;
+}
+
+/* Inner page hero */
+.souls-page-hero {
+  display: flex;
+  min-height: 380px;
+  align-items: flex-end;
+  padding: 5rem 0 3.5rem;
+}
+
+.souls-page-hero::after {
+  background:
+    linear-gradient(90deg, rgba(6, 21, 41, 0.93) 0%, rgba(6, 21, 41, 0.75) 55%, rgba(6, 21, 41, 0.45) 100%),
+    linear-gradient(180deg, rgba(6, 21, 41, 0.25), rgba(6, 21, 41, 0.9));
+}
+
+.souls-page-hero h1 {
+  max-width: 20ch;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+}
+
+.souls-page-hero .souls-hero-lead {
+  max-width: 40rem;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 991.98px) {
+  .souls-hero {
+    min-height: 0;
+  }
+
+  .souls-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .souls-hero-copy {
+    max-width: 100%;
+  }
+
+  .souls-hero-portrait {
+    width: min(100%, 22rem);
+  }
+
+  .souls-hero-meta {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-hero .container {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+
+  .souls-hero h1 {
+    font-size: 3rem;
+  }
+
+  .souls-hero-lead {
+    font-size: 0.98rem;
+  }
+
+  .souls-page-hero {
+    min-height: 300px;
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .souls-page-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Service strip under the hero */
+.souls-service-strip {
+  position: relative;
+  z-index: 2;
+  background: #fffdf8;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.souls-service-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+}
+
+.souls-service-strip-item {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.2rem;
+  border-right: 1px solid rgba(11, 34, 64, 0.12);
+}
+
+.souls-service-strip-item span {
+  color: var(--souls-gold-deep);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.souls-service-strip-item strong {
+  margin-top: 0.15rem;
+  color: var(--souls-ink);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.9rem;
+}
+
+.souls-service-strip-item small {
+  margin-top: 0.1rem;
+  color: #67717d;
+  font-size: 0.7rem;
+}
+
+.souls-service-strip .souls-btn {
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+@media (max-width: 991.98px) {
+  .souls-service-strip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .souls-service-strip-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .souls-service-strip .souls-btn {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-service-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem 0;
+  }
+
+  .souls-service-strip-item {
+    padding-right: 0;
+    padding-bottom: 0.7rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(11, 34, 64, 0.1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sections and editorial layout
+   -------------------------------------------------------------------------- */
+
+.souls-section {
+  padding: 5.5rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.souls-section--cream {
+  background: var(--souls-cream);
+}
+
+.souls-section--paper {
+  background: var(--souls-paper);
+}
+
+.souls-section--navy {
+  color: #fff;
+  background: linear-gradient(135deg, #0b2240 0%, #13304f 55%, #07182d 100%);
+  border-top-color: rgba(212, 175, 55, 0.5);
+}
+
+.souls-section--navy h2,
+.souls-section--navy h3,
+.souls-section--navy .souls-section-title {
+  color: #fff;
+}
+
+.souls-section--navy p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.souls-section-head {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.souls-section-head--left {
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+.souls-section-title {
+  margin: 0 0 0.75rem;
+  color: var(--souls-navy);
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: clamp(2.4rem, 3.8vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-align: inherit;
+}
+
+.souls-section-head p {
+  margin: 0 auto;
+  max-width: 40rem;
+  color: #526070;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.souls-section-head--left p {
+  margin-left: 0;
+}
+
+.souls-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.souls-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.souls-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+@media (max-width: 991.98px) {
+  .souls-grid-3,
+  .souls-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-grid-2,
+  .souls-grid-3,
+  .souls-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .souls-section {
+    padding: 3.6rem 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Welcome / lineage
+   -------------------------------------------------------------------------- */
+
+.souls-welcome-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.souls-welcome-image {
+  position: relative;
+  margin: 0;
+}
+
+.souls-welcome-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 24px 55px -30px rgba(11, 34, 64, 0.55);
+}
+
+.souls-welcome-image::after {
+  position: absolute;
+  right: -0.75rem;
+  bottom: -0.75rem;
+  width: 45%;
+  height: 45%;
+  border-right: 3px solid var(--souls-gold);
+  border-bottom: 3px solid var(--souls-gold);
+  content: '';
+  pointer-events: none;
+}
+
+.souls-welcome-copy .souls-section-title {
+  text-align: left;
+}
+
+.souls-welcome-copy p {
+  color: #465362;
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+.souls-lineage-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.souls-lineage-card {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-left: 3px solid var(--souls-gold);
+}
+
+.souls-lineage-mark {
+  display: grid;
+  flex: 0 0 3rem;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  color: var(--souls-gold-deep);
+  background: #f7f1e3;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50%;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.souls-lineage-card h3 {
+  margin: 0 0 0.25rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.78rem;
+  text-align: left;
+}
+
+.souls-lineage-card p {
+  margin: 0;
+  color: #526070;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.souls-lineage-card a {
+  color: var(--souls-gold-deep);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .souls-welcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .souls-welcome-image {
+    width: min(100%, 28rem);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-lineage-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Story / timeline
+   -------------------------------------------------------------------------- */
+
+.souls-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.souls-story-copy .souls-section-title {
+  text-align: left;
+}
+
+.souls-story-copy p {
+  color: #465362;
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+.souls-story-image {
+  position: relative;
+  margin: 0;
+}
+
+.souls-story-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 4%;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.souls-story-image figcaption {
+  padding: 0.7rem 0 0;
+  color: var(--souls-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.souls-timeline {
+  position: relative;
+  max-width: 52rem;
+  margin: 2.5rem auto 0;
+  padding-left: 1.5rem;
+}
+
+.souls-timeline::before {
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.38rem;
+  width: 1px;
+  background: rgba(212, 175, 55, 0.65);
+  content: '';
+}
+
+.souls-timeline-item {
+  position: relative;
+  padding: 0 0 1.6rem 1.2rem;
+}
+
+.souls-timeline-item::before {
+  position: absolute;
+  top: 0.35rem;
+  left: -1.2rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--souls-gold);
+  border: 2px solid var(--souls-cream);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--souls-gold);
+  content: '';
+}
+
+.souls-timeline-item h3 {
+  margin: 0 0 0.3rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.souls-timeline-item p {
+  margin: 0;
+  color: #526070;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 991.98px) {
+  .souls-story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Cards and beliefs
+   -------------------------------------------------------------------------- */
+
+.souls-belief-card,
+.souls-ministry-card,
+.souls-sermon-preview,
+.souls-testimony-card,
+.souls-heritage-card {
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-belief-card h3,
+.souls-ministry-card h3,
+.souls-sermon-preview h3,
+.souls-testimony-card h3,
+.souls-heritage-card h3 {
+  margin: 0 0 0.55rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.souls-belief-card p,
+.souls-ministry-card p,
+.souls-sermon-preview p,
+.souls-testimony-card p,
+.souls-heritage-card p {
+  margin: 0;
+  color: #526070;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.souls-card-icon {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-bottom: 0.9rem;
+  place-items: center;
+  color: var(--souls-gold-deep);
+  background: #f7f1e3;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.souls-ministry-card .souls-link-arrow,
+.souls-sermon-preview .souls-link-arrow {
+  margin-top: 1rem;
+}
+
+.souls-mini-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--souls-gold-deep);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.souls-testimony-card {
+  border-top-color: rgba(212, 175, 55, 0.7);
+}
+
+.souls-testimony-card p {
+  color: #465362;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.souls-testimony-card .souls-testimony-source {
+  display: block;
+  margin-top: 0.9rem;
+  color: var(--souls-gold-deep);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Visit band
+   -------------------------------------------------------------------------- */
+
+.souls-visit-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2.2rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 4px solid var(--souls-gold);
+  box-shadow: 0 25px 55px -36px rgba(11, 34, 64, 0.5);
+}
+
+.souls-visit-band h2 {
+  margin: 0 0 0.6rem;
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 2.6rem;
+  text-align: left;
+}
+
+.souls-visit-band p {
+  color: #526070;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.souls-visit-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.souls-visit-meta li {
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--souls-line);
+  color: #526070;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.souls-visit-meta strong {
+  display: block;
+  color: var(--souls-ink);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+  .souls-visit-band {
+    grid-template-columns: 1fr;
+    padding: 1.4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Heritage page
+   -------------------------------------------------------------------------- */
+
+.souls-chain {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0 auto 2.5rem;
+  max-width: 60rem;
+}
+
+.souls-chain-step {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2rem;
+  text-align: center;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-chain-step .souls-mini-label {
+  margin-bottom: 0.35rem;
+}
+
+.souls-chain-step h3 {
+  margin: 0 0 0.2rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+}
+
+.souls-chain-step p {
+  margin: 0;
+  color: #526070;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.souls-chain-arrow {
+  display: grid;
+  flex: 0 0 1.4rem;
+  place-items: center;
+  color: var(--souls-gold-deep);
+  font-size: 1.2rem;
+}
+
+.souls-heritage-card {
+  padding: 1.8rem;
+}
+
+.souls-heritage-card .souls-heritage-mark {
+  display: inline-flex;
+  min-height: 2.4rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.65rem;
+  color: var(--souls-gold-deep);
+  background: #f7f1e3;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.souls-heritage-card h2 {
+  margin: 0 0 0.25rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.souls-heritage-card .souls-heritage-role {
+  color: var(--souls-gold-deep);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.souls-heritage-card p {
+  margin-top: 0.8rem;
+  font-size: 0.92rem;
+}
+
+.souls-heritage-card .souls-link-arrow {
+  margin-top: 1rem;
+}
+
+.souls-quote-band {
+  max-width: 54rem;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--souls-gold);
+}
+
+.souls-quote-band p {
+  margin: 0;
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.souls-quote-band cite {
+  display: block;
+  margin-top: 0.7rem;
+  color: var(--souls-gold);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+  .souls-chain {
+    flex-direction: column;
+  }
+
+  .souls-chain-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.souls-footer {
+  padding: 4rem 0 2rem;
+  background: linear-gradient(180deg, #13304f 0%, #0b2240 55%, #061529 100%);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.1fr;
+  gap: 2rem;
+}
+
+.souls-footer h3 {
+  margin: 0 0 0.8rem;
+  color: var(--souls-gold);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.souls-footer p,
+.souls-footer a,
+.souls-footer li {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.souls-footer a:hover {
+  color: var(--souls-gold-pale);
+}
+
+.souls-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.souls-footer-brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.souls-footer-brand strong {
+  display: block;
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.souls-footer-brand small {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--souls-gold);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.souls-footer-tagline {
+  margin: 0 0 0.8rem;
+  color: var(--souls-gold) !important;
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 1.55rem !important;
+  line-height: 1.2;
+}
+
+.souls-footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.souls-footer-links li {
+  margin-bottom: 0.25rem;
+}
+
+.souls-footer-links a {
+  font-size: 0.82rem;
+}
+
+.souls-footer .souls-social {
+  display: flex;
+  gap: 0.55rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.souls-footer .souls-social img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  opacity: 0.78;
+}
+
+.souls-footer .souls-social a:hover img {
+  opacity: 1;
+  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(3deg);
+}
+
+.souls-footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.souls-footer-bottom a {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 991.98px) {
+  .souls-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .souls-footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .souls-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
+.souls-quote-band--light {
+  color: var(--souls-navy);
+  background: #f8f2e5;
+  border-left-color: var(--souls-gold);
+}
+
+.souls-quote-band--light p {
+  color: var(--souls-navy);
+}
+
+.souls-quote-band--light cite {
+  color: var(--souls-gold-deep);
+}
+
+
+/* Longer translated navigation labels get their own row on desktop. */
+html[lang="bem"] .souls-header .container,
+html[lang="ny"] .souls-header .container,
+html[lang="tum"] .souls-header .container {
+  flex-wrap: wrap;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+html[lang="bem"] .souls-nav,
+html[lang="ny"] .souls-nav,
+html[lang="tum"] .souls-nav {
+  order: 3;
+  flex: 1 0 100%;
+  margin: 0;
+  padding-bottom: 0.2rem;
+}
+
+html[lang="bem"] .souls-live-btn,
+html[lang="ny"] .souls-live-btn,
+html[lang="tum"] .souls-live-btn {
+  margin-left: auto;
+}
+
+@media (max-width: 1199.98px) {
+  html[lang="bem"] .souls-nav,
+  html[lang="ny"] .souls-nav,
+  html[lang="tum"] .souls-nav {
+    display: none !important;
+  }
+}
+
+
+/* Live countdown band */
+.souls-live-band {
+  padding: 1.35rem 0;
+  color: #fff;
+  background: linear-gradient(135deg, #0b2240 0%, #13304f 55%, #07182d 100%);
+  border-top: 2px solid var(--souls-gold);
+  border-bottom: 2px solid var(--souls-gold);
+}
+
+.souls-live-band .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.souls-live-band h2 {
+  margin: 0 0 0.2rem;
+  color: #fff;
+  font-family: 'Allura', 'Segoe Script', cursive;
+  font-size: 2.35rem;
+  line-height: 1;
+  text-align: left;
+}
+
+.souls-live-band p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.84rem;
+}
+
+.souls-countdown {
+  min-width: 11rem;
+  text-align: center;
+}
+
+.souls-countdown span {
+  display: block;
+  color: var(--souls-gold);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.souls-countdown strong {
+  display: block;
+  margin-top: 0.2rem;
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+}
+
+/* Ministry at a glance */
+.souls-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 2rem 0 0;
+}
+
+.souls-stat {
+  padding: 1rem 0.8rem;
+  text-align: center;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-top: 3px solid var(--souls-gold);
+}
+
+.souls-stat strong {
+  display: block;
+  color: var(--souls-navy);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.souls-stat span {
+  display: block;
+  margin-top: 0.25rem;
+  color: #67717d;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.souls-belief-card .souls-link-arrow,
+.souls-testimony-card .souls-link-arrow {
+  margin-top: 1rem;
+}
+
+/* Simple feature strip for the statement of faith page */
+.souls-faith-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.souls-faith-item {
+  padding: 1.4rem;
+  background: var(--souls-paper);
+  border: 1px solid var(--souls-line);
+  border-left: 3px solid var(--souls-gold);
+}
+
+.souls-faith-item h3 {
+  margin: 0 0 0.5rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.souls-faith-item p {
+  margin: 0;
+  color: #526070;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.souls-faith-item cite {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--souls-gold-deep);
+  font-size: 0.62rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+  .souls-live-band .container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .souls-live-band h2 {
+    text-align: center;
+  }
+
+  .souls-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .souls-faith-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.souls-community .souls-story-grid {
+  grid-template-columns: 1fr;
+}
+
+
+.souls-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,11 @@
+# Source material that is not part of the published site
+/*.jpg
+/New folder/
+/Subject Report.pdf
+/WEB FILES  FOR BUILD.txt
+
+# Archives and local system files
+*.zip
+.DS_Store
+Thumbs.db
+desktop.ini

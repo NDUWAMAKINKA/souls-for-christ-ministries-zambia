@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="150 15 340 300" role="img" aria-labelledby="title desc">
+  <title id="title">Souls for Christ Ministries Zambia emblem</title>
+  <desc id="desc">A gold cross rising from an open Bible inside a navy and gold seal.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8e9a2"/>
+      <stop offset="0.32" stop-color="#e6c862"/>
+      <stop offset="0.62" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#a67c0b"/>
+    </linearGradient>
+    <radialGradient id="navy" cx="38%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#173b63"/>
+      <stop offset="0.6" stop-color="#0b2240"/>
+      <stop offset="1" stop-color="#061529"/>
+    </radialGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf4"/>
+      <stop offset="1" stop-color="#ead9a5"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="320" cy="170" r="132" fill="url(#navy)" stroke="url(#gold)" stroke-width="5"/>
+  <circle cx="320" cy="170" r="118" fill="none" stroke="#d4af37" stroke-opacity="0.45" stroke-width="1.5"/>
+  <circle cx="320" cy="170" r="108" fill="none" stroke="#f8e9a2" stroke-opacity="0.18" stroke-width="1"/>
+
+  <g stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity="0.6">
+    <path d="M320 26v16"/>
+    <path d="M320 298v16"/>
+    <path d="M176 170h16"/>
+    <path d="M448 170h16"/>
+    <path d="M218 68l11 11"/>
+    <path d="M411 261l11 11"/>
+    <path d="M422 68l-11 11"/>
+    <path d="M229 261l-11 11"/>
+  </g>
+
+  <path d="M320 63c-24 27-38 47-38 68a38 38 0 0 0 76 0c0-21-14-41-38-68Z" fill="url(#gold)" opacity="0.2"/>
+
+  <g filter="url(#glow)">
+    <path d="M307 78h26v56h52v26h-52v98h-26v-98h-52v-26h52Z" fill="url(#gold)"/>
+    <path d="M320 84v168" stroke="#fff8d8" stroke-opacity="0.45" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M262 141h116" stroke="#fff8d8" stroke-opacity="0.4" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M210 232c31-9 61-6 88 9v34c-27-15-57-18-88-9Z" fill="url(#page)" stroke="#d4af37" stroke-width="2"/>
+    <path d="M430 232c-31-9-61-6-88 9v34c27-15 57-18 88-9Z" fill="url(#page)" stroke="#d4af37" stroke-width="2"/>
+    <path d="M320 241v34" stroke="#a67c0b" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M230 238c22-4 42 0 60 10M410 238c-22-4-42 0-60 10" fill="none" stroke="#b28d22" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>
