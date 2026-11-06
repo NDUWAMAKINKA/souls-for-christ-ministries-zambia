@@ -1,0 +1,499 @@
+/* ==========================================================================
+   Souls for Christ Ministries Zambia - professional emerald & gold layer
+   Loaded after the rebuild styles to refine colour, type and spacing.
+   ========================================================================== */
+
+:root {
+  --souls-navy: #0a3a2a;
+  --souls-navy-deep: #041f16;
+  --souls-navy-soft: #14503c;
+  --souls-gold: #d4af37;
+  --souls-gold-bright: #e2c158;
+  --souls-gold-pale: #f3e2b6;
+  --souls-gold-deep: #7a5c0a;
+  --souls-cream: #f7f3ea;
+  --souls-paper: #fffdf7;
+  --souls-ink: #10251d;
+  --souls-muted: #52615a;
+  --souls-line: rgba(10, 58, 42, 0.14);
+  --rpai-ink: var(--souls-navy);
+  --rpai-gold: var(--souls-gold);
+  --rpai-gold-bright: var(--souls-gold-bright);
+  --rpai-gold-edge: #a67c0b;
+  --rpai-gold-label: var(--souls-gold-deep);
+  --rpai-paper: var(--souls-paper);
+  --rpai-line: var(--souls-line);
+}
+
+body {
+  background: var(--souls-cream);
+  color: #3f4d46;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--souls-ink);
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.souls-topbar {
+  background: #03170f;
+  border-bottom-color: rgba(212, 175, 55, 0.24);
+}
+
+.souls-topbar .souls-topbar-heritage {
+  color: var(--souls-gold);
+}
+
+.souls-header {
+  background: rgba(4, 31, 22, 0.97);
+  border-bottom-color: rgba(212, 175, 55, 0.32);
+}
+
+.souls-header.is-scrolled {
+  background: #041f16;
+}
+
+.souls-header .container {
+  min-height: 72px;
+}
+
+.souls-brand-mark {
+  width: 46px;
+  height: 46px;
+}
+
+.souls-brand-text strong {
+  font-size: 0.88rem;
+  letter-spacing: 0.09em;
+}
+
+.souls-brand-text small {
+  color: var(--souls-gold);
+  font-size: 0.52rem;
+  letter-spacing: 0.24em;
+}
+
+.souls-nav > li > a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.63rem;
+  letter-spacing: 0.11em;
+}
+
+.souls-nav > li > a:hover,
+.souls-nav > li.active > a {
+  color: var(--souls-gold);
+}
+
+.souls-live-btn {
+  min-height: 38px;
+  padding: 0.5rem 0.9rem;
+  color: #10251d !important;
+  background: var(--souls-gold);
+  border-color: var(--souls-gold);
+  font-size: 0.6rem;
+}
+
+.souls-live-btn:hover {
+  background: var(--souls-gold-bright);
+}
+
+/* Hero -------------------------------------------------------------------- */
+
+.souls-hero {
+  background: #041f16;
+}
+
+.souls-hero::after {
+  background:
+    linear-gradient(90deg, rgba(4, 31, 22, 0.96) 0%, rgba(4, 31, 22, 0.84) 44%, rgba(4, 31, 22, 0.26) 100%),
+    linear-gradient(180deg, rgba(4, 31, 22, 0.18) 0%, rgba(4, 31, 22, 0.9) 100%);
+}
+
+.souls-page-hero::after {
+  background:
+    linear-gradient(90deg, rgba(4, 31, 22, 0.95) 0%, rgba(4, 31, 22, 0.78) 55%, rgba(4, 31, 22, 0.45) 100%),
+    linear-gradient(180deg, rgba(4, 31, 22, 0.3), rgba(4, 31, 22, 0.92));
+}
+
+.souls-kicker {
+  color: var(--souls-gold-pale);
+  font-size: 0.63rem;
+  letter-spacing: 0.2em;
+}
+
+.souls-kicker::before {
+  background: var(--souls-gold);
+}
+
+.souls-hero h1,
+.souls-page-hero h1 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.08;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.24);
+}
+
+.souls-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(2.8rem, 4.8vw, 4.5rem);
+}
+
+.souls-page-hero h1 {
+  max-width: 22ch;
+  font-size: clamp(2.3rem, 4.2vw, 3.7rem);
+}
+
+.souls-hero-lead {
+  font-size: 1.03rem;
+  line-height: 1.78;
+}
+
+.souls-hero-portrait {
+  background: rgba(4, 31, 22, 0.55);
+}
+
+.souls-hero-portrait .souls-portrait-name {
+  color: var(--souls-gold-pale);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.souls-hero-portrait .souls-portrait-role {
+  color: rgba(255, 255, 255, 0.62);
+  letter-spacing: 0.15em;
+}
+
+.souls-service-strip {
+  background: var(--souls-paper);
+  border-bottom-color: rgba(212, 175, 55, 0.36);
+}
+
+.souls-service-strip-item span {
+  color: var(--souls-gold-deep);
+}
+
+.souls-service-strip-item strong {
+  color: var(--souls-ink);
+  font-size: 0.86rem;
+}
+
+/* Section titles ---------------------------------------------------------- */
+
+.souls-section {
+  padding: 5.4rem 0;
+  border-top-color: rgba(212, 175, 55, 0.26);
+}
+
+.souls-section--cream {
+  background: var(--souls-cream);
+}
+
+.souls-section--paper {
+  background: var(--souls-paper);
+}
+
+.souls-section--navy {
+  background: linear-gradient(135deg, #0a3a2a 0%, #14503c 55%, #041f16 100%);
+  border-top-color: rgba(212, 175, 55, 0.45);
+}
+
+.souls-section-head {
+  margin-bottom: 2.7rem;
+}
+
+.souls-section-title {
+  color: var(--souls-ink);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(1.8rem, 2.9vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.2;
+}
+
+.souls-section--navy .souls-section-title {
+  color: #fff;
+}
+
+.souls-section-head p {
+  color: var(--souls-muted);
+  font-size: 0.96rem;
+}
+
+.souls-section--navy .souls-section-head p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Live band --------------------------------------------------------------- */
+
+.souls-live-band {
+  background: linear-gradient(135deg, #0a3a2a 0%, #14503c 55%, #041f16 100%);
+}
+
+.souls-live-band h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.souls-live-band p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.8rem;
+}
+
+.souls-countdown span {
+  color: var(--souls-gold);
+}
+
+.souls-countdown strong {
+  font-size: 1.1rem;
+}
+
+/* Cards ------------------------------------------------------------------- */
+
+.souls-belief-card,
+.souls-ministry-card,
+.souls-sermon-preview,
+.souls-testimony-card,
+.souls-heritage-card,
+.souls-give-card,
+.souls-form-panel,
+.souls-contact-card,
+.souls-visit-band,
+.souls-sermon-outline,
+.souls-word-card {
+  border-radius: 2px;
+  box-shadow: 0 18px 38px -30px rgba(4, 31, 22, 0.38);
+}
+
+.souls-belief-card,
+.souls-ministry-card,
+.souls-sermon-preview,
+.souls-testimony-card,
+.souls-heritage-card {
+  border-top-width: 2px;
+}
+
+.souls-belief-card h3,
+.souls-ministry-card h3,
+.souls-sermon-preview h3,
+.souls-testimony-card h3,
+.souls-heritage-card h3 {
+  color: var(--souls-ink);
+  font-size: 0.92rem;
+}
+
+.souls-belief-card p,
+.souls-ministry-card p,
+.souls-sermon-preview p,
+.souls-heritage-card p {
+  color: var(--souls-muted);
+  font-size: 0.89rem;
+}
+
+.souls-testimony-card p {
+  color: #44534b;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.souls-testimony-card .souls-testimony-source {
+  color: var(--souls-gold-deep);
+}
+
+.souls-card-icon {
+  width: 2.45rem;
+  height: 2.45rem;
+  color: var(--souls-gold-deep);
+  background: #f4eedf;
+  border-color: rgba(212, 175, 55, 0.42);
+}
+
+.souls-mini-label {
+  color: var(--souls-gold-deep);
+  font-size: 0.61rem;
+}
+
+.souls-link-arrow {
+  color: var(--souls-navy);
+  font-size: 0.7rem;
+}
+
+.souls-link-arrow:hover {
+  color: var(--souls-gold-deep);
+}
+
+.souls-stats .souls-stat {
+  border-top-color: var(--souls-gold);
+  box-shadow: 0 14px 30px -28px rgba(4, 31, 22, 0.3);
+}
+
+.souls-stat strong {
+  color: var(--souls-navy);
+}
+
+/* Visit band -------------------------------------------------------------- */
+
+.souls-visit-band {
+  border-top-color: var(--souls-gold);
+}
+
+.souls-visit-band h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.souls-visit-band p {
+  color: var(--souls-muted);
+}
+
+.souls-map {
+  border-top-color: var(--souls-gold);
+}
+
+.souls-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+.souls-map-note {
+  color: var(--souls-muted);
+  background: var(--souls-paper);
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.souls-footer {
+  background: linear-gradient(180deg, #0d4434 0%, #0a3a2a 55%, #041f16 100%);
+  border-top-color: var(--souls-gold);
+}
+
+.souls-footer h3 {
+  color: var(--souls-gold);
+}
+
+.souls-footer-brand strong {
+  color: #fff;
+}
+
+.souls-footer-tagline {
+  color: var(--souls-gold) !important;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.souls-footer p,
+.souls-footer a,
+.souls-footer li {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.souls-footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.13);
+}
+
+/* Forms and buttons ------------------------------------------------------- */
+
+.souls-btn,
+.souls-btn-outline {
+  border-radius: 2px;
+  letter-spacing: 0.12em;
+}
+
+.souls-btn {
+  color: #10251d !important;
+  background: var(--souls-gold);
+  border-color: var(--souls-gold);
+}
+
+.souls-btn:hover {
+  color: #10251d !important;
+  background: var(--souls-gold-bright);
+  border-color: var(--souls-gold-bright);
+}
+
+.souls-btn-outline {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.52);
+}
+
+.souls-btn-outline:hover {
+  color: #10251d !important;
+  background: #fff;
+  border-color: #fff;
+}
+
+.souls-form-panel {
+  border-top-color: var(--souls-gold);
+}
+
+.souls-form-panel label {
+  color: var(--souls-ink);
+}
+
+.souls-form-status {
+  color: var(--souls-gold-deep);
+}
+
+.souls-contact-card h2,
+.souls-contact-card h3 {
+  color: var(--souls-ink);
+}
+
+/* Responsive refinements -------------------------------------------------- */
+
+@media (max-width: 1199.98px) {
+  .souls-header .container {
+    min-height: 66px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .souls-section {
+    padding: 3.8rem 0;
+  }
+
+  .souls-hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .souls-page-hero h1 {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+  }
+
+  .souls-section-title {
+    font-size: clamp(1.6rem, 6vw, 2.1rem);
+  }
+
+  .souls-live-band h2 {
+    font-size: 1.3rem;
+  }
+
+  .souls-visit-band h2 {
+    font-size: 1.55rem;
+  }
+}
+
+
+/* Keep gallery cards uniform regardless of the source photo orientation. */
+.rpai-media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}

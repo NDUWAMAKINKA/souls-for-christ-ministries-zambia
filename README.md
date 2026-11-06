@@ -96,7 +96,7 @@ The supplied photographs were:
 - Also exported as WebP for future use
 - Given width and height attributes to prevent layout shift
 
-The best supplied portraits of Prophetess Chilufya are used for the hero and founder sections. Low-resolution supplied images were not used on the site.
+The best supplied portraits of Prophetess Chilufya are used for the hero and founder sections, including the new studio portrait and family portrait. Low-resolution supplied images were not used on the site.
 
 Files live in `assets/images/`.
 
@@ -121,6 +121,7 @@ To add another language:
 
 ## Features
 
+- Imperial emerald, antique gold and ivory colour palette
 - Sticky header with utility bar and "Watch Live" button
 - Full-bleed hero with founder portrait and service-times strip
 - Live-service countdown
