@@ -1299,3 +1299,14 @@ body.offcanvas-menu::before {
     gap: 0.4rem 1rem;
   }
 }
+
+/* About prayer inset ------------------------------------------------------- */
+.ed-prayer-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: saturate(0.92);
+}
