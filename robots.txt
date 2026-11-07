@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://nduwamakinka.github.io/souls-for-christ-ministries-zambia/sitemap.xml

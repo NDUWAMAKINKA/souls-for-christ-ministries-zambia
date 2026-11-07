@@ -1,8 +1,8 @@
-# Souls for Christ Ministries Zambia - Website
+# Souls for Christ Ministries Zambia — Website
 
-A refined, editorial-style website for **Souls for Christ Ministries Zambia**, Lusaka.
+A cinematic, editorial website for **Souls for Christ Ministries Zambia**, Lusaka.
 
-The design uses a creamy white base (`#FDFBF7`), deep charcoal typography (`#1A1A1A`) and muted bronze accents (`#B08D57`). Headings use Cormorant Garamond; body copy uses Inter. The navigation emblem remains exactly as supplied.
+The design uses warm ivory (`#F7F1E7`), deep forest (`#12241C`) and aged bronze (`#B58B4F`), with Cormorant Garamond display type and Inter body copy. The navigation emblem remains exactly as supplied.
 
 ## Open the site
 
@@ -30,10 +30,11 @@ Then visit `http://127.0.0.1:4173/`.
 | Daily Devotional | `daily-devotional.html` |
 | Announcements | `announcements.html` |
 | Branches & Transport | `branches-transport.html` |
+| Not found | `404.html` |
 
 ## Service schedule
 
-- **Morning Glory:** Monday - Friday, 6:00 - 7:00 AM
+- **Morning Glory:** Monday – Friday, 6:00 – 7:00 AM
 - **Midweek Service:** Tuesday & Friday
 - **Main Worship:** Sunday
 
@@ -41,18 +42,19 @@ Midweek and Sunday start times are shown as "announced weekly" because they are 
 
 ## Design features
 
-- Cinematic full-bleed hero with concise mission statement
-- Cream, charcoal and bronze palette
-- Cormorant Garamond headings and Inter body text
-- Minimal stroke icons
-- Clear three-card service hub
-- Visual sermon grid with image tiles and lightbox
-- Interactive masonry gallery with lightbox
-- Concise About, leadership and vision sections
-- "What to expect" visit guidance
+- Cinematic full-height hero with slow crossfading photography
+- Transparent navigation that becomes solid on scroll
+- Arch-framed family photography and editorial image pairings
+- Oversized Cormorant display typography with bronze italic accents
+- Three-part weekly rhythm: Morning Glory, Midweek, Sunday
+- Featured sermon with an editorial message archive
+- Filterable sermon archive with search
+- Filterable masonry gallery with lightbox
+- Ministry, testimony, devotional, announcements and branch pages
 - WhatsApp visit and prayer-request forms
 - Google Maps embed for Lusaka, Zambia
-- Fully responsive layout and mobile menu
+- Responsive mobile menu and reduced-motion support
+- SEO metadata, Open Graph image, sitemap and robots file
 
 ## Public information
 
@@ -66,7 +68,7 @@ The exact venue and midweek/Sunday times should be confirmed with the church off
 
 ## Photography
 
-The supplied photographs were colour-corrected, resized and optimised. The best portraits and ministry photographs are used for the hero, About page, sermon tiles and gallery.
+The supplied photographs were resized and optimised. The family portrait, founder portraits, choir and worship photographs, and the congregation photograph from the church Facebook page are used across the site. The Facebook congregation image is used on the homepage and gallery.
 
 ## Deployment
 
